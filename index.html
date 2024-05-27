@@ -3,18 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página Pessoal</title>
+    <title>Minha Landing Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Se você tiver um arquivo CSS personalizado -->
+    <style>
+        /* Se precisar de estilos personalizados */
+    </style>
 </head>
 <body>
-    <section class="section">
-        <div class="container">
-            <h1 class="title">Bem-vindo à Minha Página Pessoal</h1>
-            <p class="subtitle">Este é um exemplo simples usando Bulma CSS.</p>
+    <section class="hero is-primary is-fullheight">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Bem-vindo à Minha Landing Page</h1>
+                <p class="subtitle">Veja meus projetos no GitHub e entre em contato comigo.</p>
+            </div>
         </div>
     </section>
 
-    <script src="script.js"></script> <!-- Se você tiver um arquivo JavaScript personalizado -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title">Meus Projetos no GitHub</h2>
+            <div id="github-projects" class="columns is-multiline">
+                <!-- Aqui serão carregados os projetos do GitHub -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="title">Contato</h2>
+            <div class="columns">
+                <div class="column">
+                    <p><strong>Email:</strong> seuemail@example.com</p>
+                    <p><strong>Telefone:</strong> (xx) xxxxx-xxxx</p>
+                </div>
+                <div class="column">
+                    <!-- Formulário de contato pode ser adicionado aqui -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Aqui você pode adicionar scripts JavaScript, como carregar projetos do GitHub
+        // Exemplo de como carregar projetos do GitHub:
+        // const projectsContainer = document.getElementById('github-projects');
+        // fetch('https://api.github.com/users/seuusuario/repos')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         data.forEach(project => {
+        //             const projectCard = document.createElement('div');
+        //             projectCard.classList.add('column', 'is-one-third');
+        //             projectCard.innerHTML = `
+        //                 <div class="card">
+        //                     <div class="card-content">
+        //                         <p class="title">${project.name}</p>
+        //                         <p>${project.description}</p>
+        //                         <a href="${project.html_url}" class="button is-link">Ver no GitHub</a>
+        //                     </div>
+        //                 </div>
+        //             `;
+        //             projectsContainer.appendChild(projectCard);
+        //         });
+        //     })
+        //     .catch(error => console.error('Erro ao carregar projetos do GitHub:', error));
+    </script>
 </body>
 </html>
