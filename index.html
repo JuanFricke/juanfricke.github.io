@@ -33,8 +33,8 @@
             <h2 class="title">Contato</h2>
             <div class="columns">
                 <div class="column">
-                    <p><strong>Email:</strong> seuemail@example.com</p>
-                    <p><strong>Telefone:</strong> (xx) xxxxx-xxxx</p>
+                    <p><strong>Email:</strong> juanpfricke@hotmail.com</p>
+                    <p><strong>Telefone:</strong> Não disponível publicamente</p>
                 </div>
                 <div class="column">
                     <!-- Formulário de contato pode ser adicionado aqui -->
@@ -44,28 +44,32 @@
     </section>
 
     <script>
-        // Aqui você pode adicionar scripts JavaScript, como carregar projetos do GitHub
-        // Exemplo de como carregar projetos do GitHub:
-        // const projectsContainer = document.getElementById('github-projects');
-        // fetch('https://api.github.com/users/seuusuario/repos')
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         data.forEach(project => {
-        //             const projectCard = document.createElement('div');
-        //             projectCard.classList.add('column', 'is-one-third');
-        //             projectCard.innerHTML = `
-        //                 <div class="card">
-        //                     <div class="card-content">
-        //                         <p class="title">${project.name}</p>
-        //                         <p>${project.description}</p>
-        //                         <a href="${project.html_url}" class="button is-link">Ver no GitHub</a>
-        //                     </div>
-        //                 </div>
-        //             `;
-        //             projectsContainer.appendChild(projectCard);
-        //         });
-        //     })
-        //     .catch(error => console.error('Erro ao carregar projetos do GitHub:', error));
+        // Função para carregar projetos do GitHub
+        function carregarProjetos() {
+            const projectsContainer = document.getElementById('github-projects');
+            fetch('https://api.github.com/users/JuanFricke/repos')
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(project => {
+                        const projectCard = document.createElement('div');
+                        projectCard.classList.add('column', 'is-one-third');
+                        projectCard.innerHTML = `
+                            <div class="card">
+                                <div class="card-content">
+                                    <p class="title">${project.name}</p>
+                                    <p>${project.description}</p>
+                                    <a href="${project.html_url}" class="button is-link">Ver no GitHub</a>
+                                </div>
+                            </div>
+                        `;
+                        projectsContainer.appendChild(projectCard);
+                    });
+                })
+                .catch(error => console.error('Erro ao carregar projetos do GitHub:', error));
+        }
+
+        // Chamada para carregar projetos ao carregar a página
+        carregarProjetos();
     </script>
 </body>
 </html>
