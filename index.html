@@ -22,8 +22,35 @@
     <section class="section">
         <div class="container">
             <h2 class="title">Meus Projetos no GitHub</h2>
-            <div id="github-projects" class="columns is-multiline">
-                <!-- Aqui serão carregados os projetos do GitHub -->
+            <div class="columns is-multiline" id="github-projects">
+                <!-- Projetos do GitHub serão carregados aqui -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="title">Outros Projetos</h2>
+            <div class="columns is-multiline">
+                <!-- Espaço reservado para outros projetos -->
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title">SusCube</p>
+                            <p>Analise de dados do sus usando cubo de dados, OLAP e outros conceitos da materia de Big Data, Analytics e Métricas.</p>
+                            <a href="https://github.com/JuanFricke/SusCube" class="button is-link">Ver no GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title">SenSwitch</p>
+                            <p>Sensor Monitoring App - Este projeto é parte do curso de Gestão de Infraestruturas da Universidade Regional do Noroeste do Estado do Rio Grande do Sul (UNIJUÍ).</p>
+                            <a href="https://github.com/JuanFricke/SenSwitch" class="button is-link">Ver no GitHub</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -47,25 +74,33 @@
         // Função para carregar projetos do GitHub
         function carregarProjetos() {
             const projectsContainer = document.getElementById('github-projects');
-            fetch('https://api.github.com/users/JuanFricke/repos')
-                .then(response => response.json())
-                .then(data => {
-                    data.forEach(project => {
-                        const projectCard = document.createElement('div');
-                        projectCard.classList.add('column', 'is-one-third');
-                        projectCard.innerHTML = `
-                            <div class="card">
-                                <div class="card-content">
-                                    <p class="title">${project.name}</p>
-                                    <p>${project.description}</p>
-                                    <a href="${project.html_url}" class="button is-link">Ver no GitHub</a>
-                                </div>
-                            </div>
-                        `;
-                        projectsContainer.appendChild(projectCard);
-                    });
-                })
-                .catch(error => console.error('Erro ao carregar projetos do GitHub:', error));
+            const projetos = [
+                {
+                    nome: 'SenSwitch',
+                    descricao: 'Sensor Monitoring App - Este projeto é parte do curso de Gestão de Infraestruturas da Universidade Regional do Noroeste do Estado do Rio Grande do Sul (UNIJUÍ).',
+                    link: 'https://github.com/JuanFricke/SenSwitch'
+                },
+                {
+                    nome: 'SusCube',
+                    descricao: 'Analise de dados do sus usando cubo de dados, OLAP e outros conceitos da materia de Big Data, Analytics e Métricas.',
+                    link: 'https://github.com/JuanFricke/SusCube'
+                }
+            ];
+
+            projetos.forEach(projeto => {
+                const projectCard = document.createElement('div');
+                projectCard.classList.add('column', 'is-one-third');
+                projectCard.innerHTML = `
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title">${projeto.nome}</p>
+                            <p>${projeto.descricao}</p>
+                            <a href="${projeto.link}" class="button is-link">Ver no GitHub</a>
+                        </div>
+                    </div>
+                `;
+                projectsContainer.appendChild(projectCard);
+            });
         }
 
         // Chamada para carregar projetos ao carregar a página
