@@ -1,0 +1,14 @@
+.hero {
+            background-color: #D8D0F1; /*indigo 150*/
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        .hero h1 {
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            margin-bottom: 2rem;
+        }
+        .hero a {
+            margin-top: 1rem;
+        }
