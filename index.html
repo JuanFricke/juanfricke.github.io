@@ -1,110 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Landing Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <style>
-        /* Se precisar de estilos personalizados */
-    </style>
-</head>
-<body>
-    <section class="hero is-primary is-fullheight">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">Bem-vindo à Minha Landing Page</h1>
-                <p class="subtitle">Veja meus projetos no GitHub e entre em contato comigo.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="title">Meus Projetos no GitHub</h2>
-            <div class="columns is-multiline" id="github-projects">
-                <!-- Projetos do GitHub serão carregados aqui -->
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="title">Outros Projetos</h2>
-            <div class="columns is-multiline">
-                <!-- Espaço reservado para outros projetos -->
-                <div class="column is-4">
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="title">SusCube</p>
-                            <p>Analise de dados do sus usando cubo de dados, OLAP e outros conceitos da materia de Big Data, Analytics e Métricas.</p>
-                            <a href="https://github.com/JuanFricke/SusCube" class="button is-link">Ver no GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-4">
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="title">SenSwitch</p>
-                            <p>Sensor Monitoring App - Este projeto é parte do curso de Gestão de Infraestruturas da Universidade Regional do Noroeste do Estado do Rio Grande do Sul (UNIJUÍ).</p>
-                            <a href="https://github.com/JuanFricke/SenSwitch" class="button is-link">Ver no GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="title">Contato</h2>
-            <div class="columns">
-                <div class="column">
-                    <p><strong>Email:</strong> juanpfricke@hotmail.com</p>
-                    <p><strong>Telefone:</strong> Não disponível publicamente</p>
-                </div>
-                <div class="column">
-                    <!-- Formulário de contato pode ser adicionado aqui -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Função para carregar projetos do GitHub
-        function carregarProjetos() {
-            const projectsContainer = document.getElementById('github-projects');
-            const projetos = [
-                {
-                    nome: 'SenSwitch',
-                    descricao: 'Sensor Monitoring App - Este projeto é parte do curso de Gestão de Infraestruturas da Universidade Regional do Noroeste do Estado do Rio Grande do Sul (UNIJUÍ).',
-                    link: 'https://github.com/JuanFricke/SenSwitch'
-                },
-                {
-                    nome: 'SusCube',
-                    descricao: 'Analise de dados do sus usando cubo de dados, OLAP e outros conceitos da materia de Big Data, Analytics e Métricas.',
-                    link: 'https://github.com/JuanFricke/SusCube'
-                }
-            ];
-
-            projetos.forEach(projeto => {
-                const projectCard = document.createElement('div');
-                projectCard.classList.add('column', 'is-one-third');
-                projectCard.innerHTML = `
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="title">${projeto.nome}</p>
-                            <p>${projeto.descricao}</p>
-                            <a href="${projeto.link}" class="button is-link">Ver no GitHub</a>
-                        </div>
-                    </div>
-                `;
-                projectsContainer.appendChild(projectCard);
-            });
-        }
-
-        // Chamada para carregar projetos ao carregar a página
-        carregarProjetos();
-    </script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.indigo.min.css"
+    >
+    <title>Hello world!</title>
+  </head>
+  <body>
+  <div id="navbar"></div>
+    <main class="container">
+      <h1 ><a href="#">JuanFricke.dev</a></h1>
+      
+    </main>
+  </body>
 </html>
+
+<script>
+// Função para carregar o conteúdo de um arquivo HTML
+function loadHTML(file, elementId) {
+    fetch(file)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Erro ao carregar o arquivo:', error));
+}
+
+// Carregar o arquivo navbar.html dentro do elemento com id "navbar"
+document.addEventListener('DOMContentLoaded', () => {
+    loadHTML('templates/navbar.html', 'navbar');
+});
+
+</script>
