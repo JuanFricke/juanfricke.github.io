@@ -1,26 +1,75 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark" />
-    <link rel="stylesheet" href="style.css">
-    <title>Hello world!</title>
-  </head>   
-  <body>
-  <div id="navbar"></div>
-    <main class="container">
-    <div class="hero">
-      <h1 style="margin-right: 40%;"><a href="#">JuanFricke.dev</a></h1>
-	</div>
-      <h3>Projetos em destaque</h3>
-      <div class="grid" >
-        <article>1</article>
-        <article>2</article>
-        <article>3</article>
-      </div>
-    </main>
-  </body>
-</html>
+<html lang="en" data-theme="light">
 
- <script src="scripts/navbar.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <title>Juan Paulo Fricke</title>
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <main class="container">
+    <div class="hero grid" style="margin-bottom: 33px">
+      <h1 >
+        <a href="#">JuanFricke.dev</a>
+      </h1>
+      <div></div>
+      <div class="grid">
+        <div></div>
+
+        <div><button id="open-language-modal" >Select Language</button></div>
+      </div> 
+    </div>
+
+    <!-- Language Selection Button -->
+    <!-- Language Modal -->
+    <div id="language-modal" class="modal">
+      <div class="modal-content">
+        <h3>Select Language</h3>
+        <button onclick="setLanguage('pt')">Português</button>
+        <button onclick="setLanguage('en')">English</button>
+      </div>
+    </div>
+
+    <h3 data-lang="en">Featured Projects</h3>
+    <h3 data-lang="pt">Projetos em destaque</h3>
+
+    <div class="grid">
+      <article>
+        <h5 data-lang="en">SusCube</h5>
+        <h5 data-lang="pt">SusCube</h5>
+        <p data-lang="en">Data analysis of SUS using data cubes, OLAP, and other concepts from Big Data, Analytics, and
+          Metrics.</p>
+        <p data-lang="pt">Análise de dados do SUS usando cubo de dados, OLAP e outros conceitos da matéria de Big Data,
+          Analytics e Métricas.</p>
+        <figure>
+          <img src="imgs/SusCube.png" alt="Minha Figura">
+          <figcaption data-lang="en">Graph using data found with the project</figcaption>
+          <figcaption data-lang="pt">Gráfico utilizando informações encontradas com o projeto</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h5 data-lang="en">PegaFila</h5>
+        <h5 data-lang="pt">PegaFila</h5>
+        <p data-lang="en">Queue management system focused on the Notary Office of Ijuí.</p>
+        <p data-lang="pt">Sistema de gestão de fila de atendimento com foco no Tabelionato de protestos de Ijuí.</p>
+      </article>
+      <article>
+        <h5 data-lang="en">NeuroData</h5>
+        <h5 data-lang="pt">NeuroData</h5>
+        <!-- Add descriptions in different languages here -->
+      </article>
+    </div>
+  </main>
+
+  <script src="scripts/navbar.js"></script>
+  <script src="scripts/language.js"></script>
+</body>
+
+<footer></footer>
+
+</html>
