@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="utf-8">
@@ -7,14 +7,15 @@
   <meta name="color-scheme" content="light dark" />
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
   <title>Juan Paulo Fricke</title>
 </head>
 
 <body>
   <div id="navbar"></div>
   <main class="container">
-    <div class="hero grid" style="margin-bottom: 33px">
-      <figure>
+    <div class="hero grid dark" style="margin-bottom: 33px">
+      <figure class="myself">
         <img src="imgs/juanfricke.png" width="100%" alt="Minha Figura">
       </figure>
       <div style=" position: relative; top: 45%;">
@@ -24,23 +25,21 @@
       </div>
 
       <div></div>
-      <div class="grid">
-        <div></div>
+
         
 
         <div style=" position: relative; top: 38%;" ><button id="open-language-modal">Select Language</button></div>
-      </div>
+      
     </div>
-
     <!-- Language Selection Button -->
     <!-- Language Modal -->
-    <div id="language-modal" class="modal">
+    <dialog id="language-modal" class="modal">
       <div class="modal-content">
         <h3>Select Language</h3>
         <button onclick="setLanguage('pt')">Português</button>
         <button onclick="setLanguage('en')">English</button>
       </div>
-    </div>
+    </dialog>
 
     <h3 data-lang="en">Featured Projects</h3>
     <h3 data-lang="pt">Projetos em destaque</h3>
@@ -83,6 +82,8 @@
 
   <script src="scripts/navbar.js"></script>
   <script src="scripts/language.js"></script>
+  <script src="scripts/theme.js"></script>
+
 </body>
 
 <footer></footer>

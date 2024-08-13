@@ -2,3 +2,12 @@
 @import url("styles/hero.css");
 @import url("styles/buttons.css");
 @import url("styles/lang.css");
+
+
+.myself{
+    margin-left: 1rem;
+    border: 10px;
+    border-color: blueviolet;
+    border-style: double;
+    border-radius: 1%;
+}
