@@ -21,5 +21,6 @@ function setLanguage(language) {
 
 // Set default language on page load
 document.addEventListener("DOMContentLoaded", function() {
-  setLanguage('en'); // Default to Portuguese
+  setLanguage('en'); 
 });
+

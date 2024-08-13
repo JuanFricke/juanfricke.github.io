@@ -13,14 +13,16 @@
 
 <body>
   <div id="navbar"></div>
+
   <main class="container">
     <div class="hero grid dark" style="margin-bottom: 33px">
+      
       <figure class="myself">
         <img src="imgs/juanfricke.png" width="100%" alt="Minha Figura">
       </figure>
       <div style=" position: relative; top: 45%;">
         <h1>
-          <a href="#">JuanFricke.dev</a>
+          <a href="#" style="white-space: nowrap;">JuanFricke.dev</a>
         </h1>
       </div>
 
@@ -28,17 +30,29 @@
 
         
 
-        <div style=" position: relative; top: 38%;" ><button id="open-language-modal">Select Language</button></div>
+        <div style=" position: relative; top: 38%; " ><button id="open-language-modal"><span data-lang="en">Change Language</span><span data-lang="pt">Mude a linguagem</span></button></div>
       
     </div>
     <!-- Language Selection Button -->
     <!-- Language Modal -->
-    <dialog id="language-modal" class="modal">
-      <div class="modal-content">
-        <h3>Select Language</h3>
-        <button onclick="setLanguage('pt')">Português</button>
-        <button onclick="setLanguage('en')">English</button>
-      </div>
+    <dialog id="language-modal" >
+      <article class="modal-content">
+     
+          <header>
+            <!-- <button aria-label="Close" rel="prev"></button> -->
+            <i class='bx bx-globe' ></i>
+
+            <p>
+              <!-- <strong>🗓️ Thank You for Registering!</strong> -->
+              <h3><span data-lang="en">Change language</span><span data-lang="pt">Mude a linguagem</span> </h3>
+            </p>
+          </header>
+          <div class="grid">
+            <button onclick="setLanguage('pt')">Português</button>
+            <button onclick="setLanguage('en')">English</button>
+          </div>
+        
+      </article>
     </dialog>
 
     <h3 data-lang="en">Featured Projects</h3>
