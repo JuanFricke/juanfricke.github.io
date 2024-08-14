@@ -1,0 +1,35 @@
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+}
+h1, h2 {
+    margin-top: 0;
+}
+.highlight {
+    background-color: #f4f4f4;
+    /* padding: 0.5em;
+    border-radius: 4px; */
+}
+.section {
+    margin-bottom: 2em;
+}
+.results {
+    list-style-type: none;
+    padding: 0;
+}
+.results li {
+    margin-bottom: 0.5em;
+}
+.img-container {
+    margin: 1em 0;
+    text-align: center;
+}
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

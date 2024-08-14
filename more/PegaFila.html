@@ -6,25 +6,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/styles/pegafila.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Juan Paulo Fricke</title>
+
+
+
 </head>
 
 <body>
   <div id="navbar"></div>
 
-    <main class="container">    
-        aaaa
+  <main class="container">
+
+    <body>
+      <div class="container">
+        <header>
+          <h1>Projeto de Sistema de Fila para o Tabelionato de Protestos</h1>
+        </header>
+        <p>
+          <b>Este foi um projeto desenvolvido em conjunto com <a href="https://github.com/gustavcampos">Gustavo
+              Campos</a>.</b>
+        </p>
+        <section class="section">
+          <h2>Objetivo e Problemas Resolvidos</h2>
+          <p>
+            O projeto teve como objetivo principal conquistar as premiações <span class="highlight">“Cartório
+              Top”</span> e <span class="highlight">“PQTA”</span> para o tabelionato, além de otimizar o atendimento ao
+            público e melhorar a eficiência do serviço.
+          </p>
+          <p>
+            O sistema foi criado para resolver desafios como a necessidade de melhorar a gestão das filas e reduzir o
+            tempo de espera dos clientes. Problemas técnicos como o uso de impressoras no backend e a operação segura do
+            servidor localmente também foram abordados, aproveitando os PCs existentes que operavam com Windows.
+          </p>
+          <div class="img-container">
+            <img src="/imgs/pegafila/01.png" alt="Print do sistema mostrando a tela inicial" />
+            <p>Figura 1: Tela inicial do sistema</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Critérios de Categorias de Fila</h2>
+          <p>
+            As categorias de fila foram definidas com base na legislação brasileira, que estipula a prioridade para
+            pessoas com mais de 80 anos, garantindo conformidade com as normas e uma experiência justa para todos os
+            clientes.
+          </p>
+          <div class="img-container">
+            <img src="/imgs/pegafila/03.png" alt="Print do sistema mostrando a interface de escolha da fila" />
+            <p>Figura 2: Interface de escolha da fila no tablet</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Acessibilidade e Design</h2>
+          <p>
+            Para garantir a acessibilidade e eficiência para todos os usuários, especialmente os idosos, o design da
+            interface do usuário foi simplificado. O botão para a fila preferencial é destacado com uma cor mais forte,
+            facilitando a identificação por pessoas com baixa visão.
+          </p>
+          <!-- <div class="img-container">
+                  <img src="path-to-your-image-4.jpg" alt="Print do sistema mostrando a interface com design acessível" />
+                  <p>Figura 4: Design acessível da interface do sistema</p>
+              </div> -->
+        </section>
+
+        <section class="section">
+          <h2>Estrutura e Benefícios</h2>
+          <p>
+            Os principais benefícios incluem a redução do tempo de espera dos clientes para menos de 15 minutos em 93%
+            dos casos, a garantia de atendimento adequado aos idosos e a orientação correta dos clientes para o
+            atendimento.
+          </p>
+          <div class="img-container">
+            <img src="/imgs/pegafila/11.png" alt="Print do sistema mostrando a organização das filas" />
+            <p>Figura 3: Organização das filas no sistema</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Implementação e Tecnologia</h2>
+          <p>
+            O sistema utiliza <span class="highlight">PHP</span> e <span class="highlight">JavaScript</span> puro, com o
+            framework <span class="highlight">BulmaCSS</span> para o design. O banco de dados <span
+              class="highlight">MySQL</span> foi implementado, e o sistema roda em um servidor <span
+              class="highlight">Nginx</span> instalado em uma das máquinas locais do tabelionato.
+          </p>
+          <p>
+            A conexão com a impressora é feita via rede, e um tablet conectado via Wi-Fi permite que os usuários
+            escolham a fila desejada. O sistema foi projetado para ter um baixíssimo delay entre o toque no botão e a
+            retirada da senha.
+          </p>
+        </section>
 
 
 
 
-    </main>
+        <section class="section">
+          <h2>Feedback e Resultados</h2>
+          <p>
+            O sistema recebeu feedback positivo de usuários e funcionários. Conquistamos as premiações <span
+              class="highlight">“Cartório Top”</span> e <span class="highlight">“PQTA”</span>. As filas diminuíram, e a
+            ocorrência de clientes pulando a frente foi reduzida.
+          </p>
+          <p>
+            Com a dashboard integrada, conseguimos analisar a performance dos funcionários, identificar os mais
+            eficientes e dedicar-se ao atendimento, e acompanhar o número de atendimentos em diferentes períodos.
+          </p>
+          <div class="img-container">
+            <img src="/imgs/pegafila/16.png" alt="Print da dashboard com análise de desempenho" />
+            <p>Figura 4: Dashboard com análise de desempenho dos funcionários</p>
+          </div>
+        </section>
 
-    <script src="scripts/navbar.js"></script>
-    <script src="scripts/language.js"></script>
-  </body>
-  
-  <footer></footer>
-  
-  </html>
+        <section class="section">
+          <h2>Medição do Sucesso</h2>
+          <ul class="results">
+            <li>Conquista dos prêmios “Cartório Top” e “PQTA”.</li>
+            <li>93% dos atendimentos realizados em menos de 15 minutos.</li>
+            <li>74% dos atendimentos realizados em menos de 8 minutos.</li>
+            <li>Melhora na gestão de atendimento dos funcionários com análise detalhada de performance.</li>
+          </ul>
+        </section>
+      </div>
+    </body>
+
+
+
+  </main>
+
+  <script src="scripts/navbar.js"></script>
+  <script src="scripts/language.js"></script>
+</body>
+
+<footer></footer>
+
+</html>

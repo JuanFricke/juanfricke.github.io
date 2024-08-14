@@ -16,7 +16,7 @@
 
   <main class="container">
     <div class="hero grid light" style="margin-bottom: 33px">
-      
+
       <figure class="myself">
         <img id="myself" src="imgs/juanfricke.png" width="100%" alt="Minha Figura">
       </figure>
@@ -28,30 +28,31 @@
 
       <div></div>
 
-        
 
-        <div style=" position: relative; top: 38%; " ><button id="open-language-modal"><span data-lang="en">Change Language</span><span data-lang="pt">Mude a linguagem</span></button></div>
-      
+
+      <div style=" position: relative; top: 38%; "><button id="open-language-modal"><span data-lang="en">Change
+            Language</span><span data-lang="pt">Mude a linguagem</span></button></div>
+
     </div>
     <!-- Language Selection Button -->
     <!-- Language Modal -->
-    <dialog id="language-modal" >
+    <dialog id="language-modal">
       <article class="modal-content">
-     
-          <header>
-            <!-- <button aria-label="Close" rel="prev"></button> -->
-            <i class='bx bx-globe' ></i>
 
-            <p>
-              <!-- <strong>🗓️ Thank You for Registering!</strong> -->
-              <h3><span data-lang="en">Change language</span><span data-lang="pt">Mude a linguagem</span> </h3>
-            </p>
-          </header>
-          <div class="grid">
-            <button onclick="setLanguage('pt')">Português</button>
-            <button onclick="setLanguage('en')">English</button>
-          </div>
-        
+        <header>
+          <!-- <button aria-label="Close" rel="prev"></button> -->
+          <i class='bx bx-globe'></i>
+
+          <p>
+            <!-- <strong>🗓️ Thank You for Registering!</strong> -->
+          <h3><span data-lang="en">Change language</span><span data-lang="pt">Mude a linguagem</span> </h3>
+          </p>
+        </header>
+        <div class="grid">
+          <button onclick="setLanguage('pt')">Português</button>
+          <button onclick="setLanguage('en')">English</button>
+        </div>
+
       </article>
     </dialog>
 
@@ -60,37 +61,51 @@
 
     <div class="grid">
       <article>
-        <h5><a href="https://github.com/JuanFricke/SusCube" data-tooltip="github.com/JuanFricke/SusCube">SusCube</a></h5>
+        <h5><a href="https://github.com/JuanFricke/SusCube" data-tooltip="github.com/JuanFricke/SusCube">SusCube</a>
+        </h5>
         <p data-lang="en">Data analysis of SUS using data cubes, OLAP, and other concepts from Big Data, Analytics, and
-          Metrics.</p>
-        <p data-lang="pt">Análise de dados do SUS usando cubo de dados, OLAP e outros conceitos da matéria de Big Data,
-          Analytics e Métricas.</p>
+          Metrics. Utilizing DuckDB and the Python Pandas library.</p>
+        <p data-lang="pt">Análise de dados do SUS utilizando cubos de dados, OLAP e outros conceitos de Big Data,
+          Analytics e Métricas. Usando DuckDB e a biblioteca Pandas do Python.</p>
         <figure>
-          <img src="imgs/SusCube.png" alt="Minha Figura">
-          <figcaption data-lang="en">Graph using data found with the project</figcaption>
-          <figcaption data-lang="pt">Gráfico utilizando informações encontradas com o projeto</figcaption>
+          <img src="imgs/suscube.webp" alt="Minha Figura">
+          <figcaption data-lang="en">Graph using data from the project, showing the number of services by cities in the
+            region.</figcaption>
+          <figcaption data-lang="pt">Gráfico utilizando informações do projeto, com os atendimentos por
+            cidades da região.</figcaption>
         </figure>
       </article>
       <article>
         <h5><a href="/more/PegaFila.html">PegaFila</a></h5>
-        <p data-lang="en">Queue management system focused on the Notary Office of Ijuí.</p>
-        <p data-lang="pt">Sistema de gestão de fila de atendimento com foco no Tabelionato de protestos de Ijuí.</p>
+        <p data-lang="en">Queue management system focused on the Notary Office of Ijuí. Created with PHP and BulmaCSS,
+          designed to run on the office's intranet.</p>
+        <p data-lang="pt">Sistema de gestão de filas de atendimento com foco no Tabelionato de Protestos de Ijuí. Criado
+          com PHP e BulmaCSS, feito para rodar na intranet do escritório.</p>
+        <figure>
+          <img src="imgs/pegafila.webp" alt="Minha Figura">
+          <figcaption data-lang="en">Terminal for issuing tickets (running on a tablet via Wi-Fi).</figcaption>
+          <figcaption data-lang="pt">Terminal para retirar senhas (rodando em tablet via Wi-Fi).</figcaption>
+        </figure>
       </article>
       <article>
-        <h5><a href="https://github.com/JuanFricke/NeuroData" data-tooltip="github.com/JuanFricke/NeuroData">NeuroData</a></h5>
+        <h5><a href="https://github.com/JuanFricke/NeuroData"
+            data-tooltip="github.com/JuanFricke/NeuroData">NeuroData</a></h5>
         <!-- Add descriptions in different languages here -->
         <p data-lang="en">Flask and Bulma CSS website that analyzes psychosocial data from the
           population of Ijuí, addressing the needs of the local Health Department.</p>
 
         <p data-lang="pt">Website em Flask e Bulma CSS para criar uma plataforma que analisa dados psicossociais da
           população de Ijuí, atendendo às necessidades da Secretaria de Saúde.</p>
-          <figure>
-            <img src="imgs/neurodata.png" alt="Minha Figura">
-            <figcaption ><a href="https://neurodata.onrender.com">neurodata.onrender.com</a></figcaption>
-          </figure>
-          
-  
-        </article>
+        <figure>
+          <img src="imgs/neurodata.webp" alt="Minha Figura">
+          <figcaption data-lang="en"><a href="https://neurodata.onrender.com">neurodata.onrender.com</a>: Deployment of
+            the site using the Render service.</figcaption>
+          <figcaption data-lang="pt"><a href="https://neurodata.onrender.com">neurodata.onrender.com</a>: Deploy do site
+            utilizando o serviço Render.</figcaption>
+        </figure>
+
+
+      </article>
     </div>
   </main>
 
